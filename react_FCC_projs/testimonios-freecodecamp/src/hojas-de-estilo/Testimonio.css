@@ -1,6 +1,7 @@
 .contenedor-testimonio{
   width: 1170px;
   height: 368px;
+  margin: 10px 10px 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,8 +24,7 @@
 
 .nombre-testimonio{
   font-size: 1.3rem;
-  font-weight: 600;
-}
+ }
 
 .cargo-testimonio{
   font-size: 1.3rem;
