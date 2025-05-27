@@ -12,7 +12,14 @@ function Testimonio(props) {
             <div className='contenedor-texto-testimonio'>
                 <p className='nombre-testimonio'><strong>{props.nombre}</strong> en {props.pais}</p>
                 <p className='cargo-testimonio'>{props.cargo} en <strong>{props.empresa}</strong></p>
-                <p className='texto-testimonio'>"{props.testimonio}"</p>
+                <p className='texto-testimonio'>
+                    "{props.testimonio.map((parte, index) => 
+                        typeof parte === "string"
+                        ? parte
+                        : <strong key={props.id + "-" + index}>{parte.negrita}</strong>
+                        )
+                      }"
+                </p>
             </div>
         </div>
     );
