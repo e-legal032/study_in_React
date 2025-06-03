@@ -1,3 +1,5 @@
+import '../hojas-de-estilo/Boton.css';
+
 function Boton(props){
 
   const esOperador = valor => {
@@ -6,8 +8,9 @@ function Boton(props){
 
   return(
       <div
-        className={`'boton-contenedor' ${esOperador(props.children) ? 'operador' : ''}`.trimEnd()}>
-          {props.children}
+        className={`boton-contenedor ${esOperador(props.children) ? 'operador' : ''}`.trimEnd()} 
+        onClick={() => props.manejarClic(props.children)}>
+      {props.children}
       </div>
   );
 }
